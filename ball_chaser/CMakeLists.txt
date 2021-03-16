@@ -73,6 +73,11 @@ find_package(catkin REQUIRED COMPONENTS
  )
  
  add_compile_options(-std=c++11)
+ 
+ include_directories(include ${catkin_INCLUDE_DIRS})
+ add_executable(drive_bot src/drive_bot.cpp)
+ add_dependencies(drive_bot ${catkin_EXPORTED_TARGETS})
+ target_link_libraries(drive_bot ${catkin_LIBRARIES})
 
 ################################################
 ## Declare ROS dynamic reconfigure parameters ##
