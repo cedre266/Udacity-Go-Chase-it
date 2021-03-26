@@ -30,8 +30,8 @@ void process_image_callback(const sensor_msgs::Image img)
     int counter_left = 0;
     int counter_straight = 0;
     int counter_right = 0;
-    float left_limit = img.width / 3;
-    float right_limit = 2 * img.width / 3;
+    float left_limit = img.width / 5;
+    float right_limit = 4 * img.width / 5;
     int max_counter;
     std::string direction;
 
